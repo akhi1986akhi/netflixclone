@@ -1,0 +1,11 @@
+.form-control{
+    background: transparent;
+    font-size: 1.2rem;
+    color: #fff;
+    
+}
+::placeholder{
+    color: #ffffffaa;
+    font-size: 0.7rem;
+}
+

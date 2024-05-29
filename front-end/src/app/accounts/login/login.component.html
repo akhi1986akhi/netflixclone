@@ -1,0 +1,24 @@
+<section class="vh-100 bg-image" style="background-image: url('../../assets/img/main-home.jpg');"
+ >
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3 justify-content-center mx-auto">
+    <form class="bg-dark p-4 border-2 rounded h-80" [formGroup]="loginform">
+        <h2 class="text-danger fw-normal"> LOGIN</h2>
+        <div class="mb-2">
+         
+          <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" formControlName="email">
+         
+        </div>
+        <div class="mb-2">
+         
+          <input type="password" class="form-control " id="exampleInputPassword1" placeholder="password" formControlName="password">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">
+            <h6 class="text-white">Remember me</h6>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-danger text-white float-end" (click)="login()" [disabled]="!this.loginform.valid">LOGIN</button>
+      </form>
+  </div>
+</section>

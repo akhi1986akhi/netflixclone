@@ -1,0 +1,9 @@
+ul li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+a{
+    color: #fff;
+    font-weight: 100;
+    font-size: 14px;
+}

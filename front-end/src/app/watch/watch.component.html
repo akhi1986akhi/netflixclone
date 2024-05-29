@@ -1,0 +1,132 @@
+<section class="bg-dark">
+    <div class="row align-items-start justify-content-center me-0 bg-dark">
+        <div class="col-xl-8 bg-dark d-flex justify-content-center flex-column">
+            
+            <div class="play m-3">
+                <!-- <div class="icon  d-flex flex-row justify-content-end me-4" >
+             
+                    <h2><i class="bi bi-hand-thumbs-up-fill  me-2" (click)="changeColors('blue')" [style.color]="this.color"></i></h2>
+                   <h2> <i class="bi bi-hand-thumbs-down-fill  me-2" ></i></h2>
+                  <h2>  <i class="bi bi-chat-quote-fill "></i></h2>
+                  
+                </div> -->
+                <video controls id="your-video" width="720px">
+                    <source [src]="url" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video> 
+            </div>
+           
+        </div>
+        <div class="col-xl-4 desc">
+            <div class="card bg-black text-white m-3">
+               
+               <div *ngFor="let movie of movies">
+                <div class="card-body" *ngIf="movie?.id==watchId">
+                    <h5 class="card-title">{{movie.title}}</h5>
+                    <p class="card-text">Genre: {{movie.genere}}</p>
+                    <p class="card-text">Director: {{movie.director}}</p>
+                    <p class="card-text">Year: {{movie.year}}</p>
+                    <p class="card-text">Rating: {{movie.rating}}</p>
+                    <p class="card-text">Duration: {{movie.duration}}</p>
+                    <p class="card-text">Description: {{movie.desc}}</p>
+                  </div>
+               </div>
+              </div>
+            
+        </div>
+    </div>
+    <section class="featured-movie bg-black mt-2 " *ngIf="isLoggedIn">
+        <div class="container">
+            <div class="blog d-flex flex-column justify-content-center align-items-center py-3">
+                <h2 class="text-white mb-4 text-center p-3">Featured Movies</h2>
+                <div class="row flex-wrap g-5">
+                    <div class="col-xl-3">
+                        <div class="card" >
+                            <img src="assets/img/animal.jpg" alt="">
+                        </div>
+                        <div class="btn-sec d-flex w-100 justify-content-center align-items-center mt-2">
+                            <button type="button" class="btn btn-danger" (click)="watch(1)"> <i
+                                    class="bi bi-play-fill"></i>
+                                WATCH NOW</button>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="card">
+                            <img src="assets/img/gadar-2.jpg" alt="">
+                        </div>
+                        <div class="btn-sec d-flex w-100 justify-content-center align-items-center mt-2">
+                            <div class="btn-sec d-flex w-100 justify-content-center align-items-center mt-2">
+                                <button type="button" class="btn btn-danger" (click)="watch(2)"> <i
+                                        class="bi bi-play-fill"></i>
+                                    WATCH NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="card" >
+                            <img src="assets/img/Pathaan-01.jpg" alt="">
+                        </div>
+                        <div class="btn-sec d-flex w-100 justify-content-center align-items-center mt-2">
+                            <div class="btn-sec d-flex w-100 justify-content-center align-items-center mt-2">
+                                <button type="button" class="btn btn-danger" (click)="watch(3)" >
+                                    <i class="bi bi-play-fill"></i>
+                                    WATCH NOW
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="card" >
+                            <img src="assets/img/download.jpg" alt="">
+                        </div>
+                        <div class="btn-sec d-flex w-100 justify-content-center align-items-center mt-2">
+                            <button type="button" class="btn btn-danger" (click)="watch(4)"> <i
+                                    class="bi bi-play-fill"></i>
+                                WATCH NOW</button>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="card" >
+                            <img src="assets/img/jawan.jpg" alt="">
+                        </div>
+                        <div class="btn-sec d-flex w-100 justify-content-center align-items-center mt-2">
+                            <button type="button" class="btn btn-danger" (click)="watch(5)"> <i
+                                    class="bi bi-play-fill"></i>
+                                WATCH NOW</button>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="card" >
+                            <img src="assets/img/garuda.jpg" alt="">
+                        </div>
+                        <div class="btn-sec d-flex w-100 justify-content-center align-items-center mt-2">
+                            <button type="button" class="btn btn-danger" (click)="watch(6)"> <i
+                                    class="bi bi-play-fill"></i>
+                                WATCH NOW</button>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="card" >
+                            <img src="assets/img/3idiots.jpg" alt="">
+                        </div>
+                        <div class="btn-sec d-flex w-100 justify-content-center align-items-center mt-2">
+                            <button type="button" class="btn btn-danger" (click)="watch(7)"> <i
+                                    class="bi bi-play-fill"></i>
+                                WATCH NOW</button>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="card" >
+                            <img src="assets/img/12thfail.webp" alt="">
+                        </div>
+                        <div class="btn-sec d-flex w-100 justify-content-center align-items-center mt-2">
+                            <button type="button" class="btn btn-danger" (click)="watch(8)"> <i
+                                    class="bi bi-play-fill"></i>
+                                WATCH NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

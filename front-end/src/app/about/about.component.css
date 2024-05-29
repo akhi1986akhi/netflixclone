@@ -1,0 +1,4 @@
+.text-white {
+    --bs-text-opacity: 3;
+    color: rgb(146 146 146) !important;
+}

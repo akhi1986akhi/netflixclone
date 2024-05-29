@@ -1,0 +1,39 @@
+<section class="vh-100 bg-image"
+  style="background-image: url('../../assets/img/main-home.jpg');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3 justify-content-center mx-auto">
+    <form class="row g-3 bg-black p-4 " [formGroup]="signFrom">
+        <h3 class="text-white">SIGN UP</h3>
+       
+        <div class="col-md-6">
+          <input type="name" id ="fname" class="form-control"  placeholder="FIRST NAME" formControlName="fname">
+        </div>
+        <div class="col-md-6">
+          <input type="name" id ="lname" class="form-control"  placeholder="LAST NAME" formControlName="lname">
+        </div>
+        <div class="col-6">
+          <input type="number" id ="contact"class="form-control"  placeholder="MOBILE NO" formControlName="conatct">
+        </div>
+        <div class="col-6">
+            <input type="email" class="form-control"   placeholder="EMAIL"  readonly  formControlName="email">
+          </div>
+        <div class="col-6">
+          <input type="password" class="form-control"  placeholder="PASSWORD" formControlName="password">
+        </div>
+        <div class="col-6">
+            <input type="password" class="form-control"  placeholder="PASSWORD" formControlName="confirmPass">
+          </div>
+     
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" (click)="checkInput($event)">
+            <label class="form-check-label text-white" for="gridCheck">
+              accept terms and conditions
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-danger float-end" (click)="submit()" [disabled]="!this.signFrom.valid">Sign Up</button>
+        </div>
+      </form>
+  </div>
+</section>

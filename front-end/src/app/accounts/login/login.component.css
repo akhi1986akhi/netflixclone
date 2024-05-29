@@ -1,0 +1,23 @@
+.mask{
+    max-width: 400px;
+}
+.form-control{
+   background: transparent;
+    font-size: 1.2rem;
+    color: #fff;
+    
+}
+::placeholder{
+    color: #ffffffaa;
+    font-size: 0.7rem;
+}
+
+.bg-dark{
+    background: #000000a9!important;
+   
+}
+
+form{
+    border: solid 1px #ffffff5c;
+    backdrop-filter: blur(5px);
+}
